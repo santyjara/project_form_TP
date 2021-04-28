@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        font-family: 'Anaheim';
+        font-size: 1.2em;
+    }
+
+    #outside {
+        background-color: hsl(183deg 70% 48%);
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 70%;
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+    }
+
+    #survey-form {
+        background-color: white;
+    }
+
+    fieldset {
+        border: 1px solid lightgray;
+        margin: 10px;
+    }
+
+    legend {
+        font-weight: 700;
+    }
+
+    #number {
+        width: 150px;
+    }
+
+
+    div+div {
+        margin-top: 1em;
+    }
+
+    */ input,
+    textarea {
+
+        border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+
+        border-color: OrangeRed;
+    }
+
+    textarea {
+
+        vertical-align: top;
+
+        height: 5em;
+
+        resize: vertical;
+    }
+
+    .button {
+
+        padding-left: 90px;
+
+    }
+
+    button {
+        margin: .5em;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: rgb(230, 245, 24);
+        color: rgb(46, 45, 45);
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+
+    textarea {
+        vertical-align: top;
+        height: 1em;
+        resize: vertical;
+    }
+
+    #submitbutton {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="outside">
+
+        <form id="survey-form">
+            <header><img
+                    src="https://static.wixstatic.com/media/36173e_4801baf9fc7441e99e461379ec6751b6~mv2.png/v1/fill/w_197,h_69,al_c,q_85,usm_0.66_1.00_0.01/RGB%20Factored%20Logo.webp"
+                    alt="Factored"
+                    style="width:197px;height:69px;object-fit:cover;object-position:100% 100%;position:relative">
+            </header>
+            <h1 id="title"
+                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  ">
+                CREDIT CALCULATOR</h1>
+
+
+
+            <!-- ------------------Personal Details---------------------------- -->
+            <fieldset>
+
+                <legend>Personal Details</legend>
+
+                <div>
+                    <label id="name-label" for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" placeholder="Enter name here">  
+                </div>
+
+                <div>
+                    <label id="annual" for="annual">Annual income:</label>
+                    <input type="number" name="annual" id="annual_inc" placeholder="Enter annual income USD"> 
+                </div>
+                <div>
+                    <label id="bc_uti" for="bc_uti">Bc util:</label>
+                    <input type="number" id="bc_util" name="bc_uti" placeholder="Enter bc util">
+                    <small>Ratio of total current balance to high credit/credit limit for all bankcard
+                        accounts.</small> 
+                </div>
+                <div>
+                    <label id="total_bc_lim" for="total_bc_lim">Total bc limit:</label>
+                    <input type="number" id="total_bc_limit" name="total_bc_lim" placeholder="Enter total bc limit"> 
+                    <small>Total bankcard high credit/credit limit</small>
+                </div>
+
+                <div>
+                    <label id="tot_hi_cred" for="tot_hi_cred">Total high cred limit:</label>
+                    <input type="number" id="tot_hi_cred_lim" name="tot_hi_cred" placeholder="Enter total bc limit"> 
+                    <small>Total installment high credit/credit limit</small>
+                </div>
+
+                <!-- ------------------Radio Buttons-------------------------------- -->
+                <div>
+                    <label for="term">Term</label>
+                    <p>
+                        <input type="radio" name="term" id="term1" value=" 36 months" checked>36 months<br>
+                        <input type="radio" name="term" id="term2" value=" 60 months">60 months<br>
+                    </p>
+                </div>
+                <div>
+                    <label for="initial_list_status">Initial list status</label>
+                    <p>
+                        <input type="radio" name="initial_list_status" id="initial_list_status1" value="w" checked>W<br>
+                        <input type="radio" name="initial_list_status" id="initial_list_status2" value="f">F<br>
+                    </p>
+                </div>
+                <div>
+                    <label for="application_type">Application type</label>
+                    <p>
+                        <input type="radio" name="application_type" id="application_type1" value="Individual"
+                            checked>Individual<br>
+                        <input type="radio" name="application_type" id="application_type2" value="Joint App">Joint
+                        App<br>
+                    </p>
+                </div>
+
+                <!-- -----------------Dropdown menus--------------------------------- -->
+                <div>
+                    <label for="purpose">Purpose:</label>
+                    <select id="purpose">
+                        <option value="credit_card">credit_card</option>
+                        <option value="debt_consolidation">debt consolidation</option>
+                        <option value="home_improvement">home improvement</option>
+                        <option value="major_purchase">major purchase</option>
+                        <option value="car">car</option>
+                        <option value="moving">moving</option>
+                        <option value="vacation">vacation</option>
+                        <option value="medical">medical</option>
+                        <option value="small_business">small business</option>
+                        <option value="wedding">wedding</option>
+                        <option value="house">house</option>
+                        <option value="renewable_energy">renewable energy</option>
+                        <option value="educational">educational</option>
+                        <option value="other">other</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="emp_length">Employment length in years:</label>
+                    <select id="emp_length">
+                        <option value="< 1 year">
+                            < 1 year</option>
+                        <option value="1 year">1 year</option>
+                        <option value="2 years">2 years</option>
+                        <option value="3 years">3 years</option>
+                        <option value="4 years">4 years</option>
+                        <option value="5 years">5 years</option>
+                        <option value="6 years">6 years</option>
+                        <option value="7 years">7 years</option>
+                        <option value="8 years">8 years</option>
+                        <option value="9 years">9 years</option>
+                        <option value="10+ years">10+ years</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="home_ownership">The home ownership status:</label>
+                    <select id="home_ownership">
+                        <option value="MORTGAGE">Mortage</option>
+                        <option value="RENT">Rent</option>
+                        <option value="OWN">Own</option>
+                        <option value="ANY">Any</option>
+                        <option value="OTHER">Other</option>
+                        <option value="NONE">None</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- --------------------Text Areas------------------------------ -->
+
+            <div id="submitbutton">
+                <button id="btn" class="btn">SUBMIT</button> 
+            </div>
+            <div class="form-control">
+                <label for="prediction">Classifier's prediction</label>
+                <textarea name="prediction" id="prediction" height: 10px rows="2"></textarea>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("btn").addEventListener("click", function (e) {
+            e.preventDefault();
+            callAPI();
+        });
+    });
+
+    async function callAPI() {
+
+        if (document.getElementById('term1').checked) {
+            term_ = document.getElementById('term1').value;
+        } else {
+            term_ = document.getElementById('term2').value;
+        }
+
+        if (document.getElementById('initial_list_status1').checked) {
+            init_list_status = document.getElementById('initial_list_status1').value;
+        } else {
+            init_list_status = document.getElementById('initial_list_status2').value;
+        }
+
+        if (document.getElementById('application_type1').checked) {
+            app_type = document.getElementById('application_type1').value;
+        } else {
+            app_type = document.getElementById('application_type2').value;
+        }
+
+        let responsetest = await fetch('http://54.237.123.113/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                term: term_,
+                purpose: document.getElementById("purpose").value,
+                initial_list_status: init_list_status,
+                application_type: app_type,
+                emp_length: document.getElementById("emp_length").value,
+                tot_hi_cred_lim: parseInt(document.getElementById("tot_hi_cred_lim").value),
+                total_bc_limit: parseInt(document.getElementById("total_bc_limit").value),
+                home_ownership: document.getElementById("home_ownership").value,
+                bc_util: parseInt(document.getElementById("bc_util").value),
+                annual_inc: parseInt(document.getElementById("annual_inc").value)
+            })
+        });
+        let parsed = await responsetest.json()
+
+        let predtext = document.getElementById("prediction")
+        predtext.value = parsed.prediction
+    }
+</script>
+
+</html>
